@@ -19,11 +19,10 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('welcome');
-});
-Route::get('/', function() { return view('welcome'); } )->name('home');
-Route::get('/admin', function() { return view('homes.admin'); } )->name('home.admin');
+} )->name('home')->middleware('auth');
+Route::get('/administrator', function() { return view('homes.administrator'); } )->name('home.administrator');
 Route::get('/manager', function() { return view('homes.manager'); } )->name('home.manager');
 Route::get('/staff', function() { return view('homes.staff'); } )->name('home.staff');
 

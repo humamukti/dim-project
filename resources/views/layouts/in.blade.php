@@ -70,23 +70,15 @@
                                 <span class="menu-title">Dashboards</span>
                             </span>
                         </div>
+
                         <div class="menu-item">
-                            <a class="menu-link" href="{{ route('users.index') }}">
-										<span class="menu-icon">
-											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
-											<span class="svg-icon svg-icon-2">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-													<path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
-													<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
-												</svg>
-											</span>
-                                            <!--end::Svg Icon-->
-										</span>
-                                <span class="menu-title">Manage User</span>
-                            </a>
+                            <div class="menu-content">
+                                <div class="separator mx-1 my-4"></div>
+                            </div>
                         </div>
+
                         <div class="menu-item">
-                            <a class="menu-link" href="{{ route('roles.index') }}" title="Build your layout and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+                            <a class="menu-link" href="{{ route('roles.index') }}">
 										<span class="menu-icon">
 											<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 											<span class="svg-icon svg-icon-2">
@@ -97,13 +89,8 @@
 											</span>
                                             <!--end::Svg Icon-->
 										</span>
-                                <span class="menu-title">Manage Role</span>
+                                <span class="menu-title">Bagian</span>
                             </a>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-content">
-                                <div class="separator mx-1 my-4"></div>
-                            </div>
                         </div>
                         <div class="menu-item">
                             <a class="menu-link" href="{{ route('products.index') }}">
@@ -118,7 +105,22 @@
 											</span>
                                             <!--end::Svg Icon-->
 										</span>
-                                <span class="menu-title">Product</span>
+                                <span class="menu-title">Barang</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{ route('users.index') }}">
+										<span class="menu-icon">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
+											<span class="svg-icon svg-icon-2">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+													<path d="M6.28548 15.0861C7.34369 13.1814 9.35142 12 11.5304 12H12.4696C14.6486 12 16.6563 13.1814 17.7145 15.0861L19.3493 18.0287C20.0899 19.3618 19.1259 21 17.601 21H6.39903C4.87406 21 3.91012 19.3618 4.65071 18.0287L6.28548 15.0861Z" fill="currentColor"></path>
+													<rect opacity="0.3" x="8" y="3" width="8" height="8" rx="4" fill="currentColor"></rect>
+												</svg>
+											</span>
+                                            <!--end::Svg Icon-->
+										</span>
+                                <span class="menu-title">Pegawai</span>
                             </a>
                         </div>
                     </div>

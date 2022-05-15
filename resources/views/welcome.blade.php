@@ -55,7 +55,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Tugas Kelompok ke-3 oleh Tim 8, Mata Kuliah Data and Information Management.
+                                    Tugas Kelompok ke-4 oleh Tim 8, Mata Kuliah Data and Information Management.
                                 </div>
                             </div>
                         </div>

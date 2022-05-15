@@ -21,9 +21,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(5);
-        return view('products.index',compact('products'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $products = Product::get();
+        return view('products.index',compact('products'));
     }
 
     /**
@@ -43,8 +42,12 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'nama_barang' => 'required',
+            'harga_barang' => 'required',
+            'biaya_penyimpanan' => 'required',
+            'periode_permintaan' => 'required',
+            'satuan' => 'required',
+            'konversi' => 'required',
         ]);
 
         Product::create($request->all());
@@ -82,8 +85,12 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         request()->validate([
-            'name' => 'required',
-            'detail' => 'required',
+            'nama_barang' => 'required',
+            'harga_barang' => 'required',
+            'biaya_penyimpanan' => 'required',
+            'periode_permintaan' => 'required',
+            'satuan' => 'required',
+            'konversi' => 'required',
         ]);
 
         $product->update($request->all());
@@ -97,9 +104,11 @@ class ProductController extends Controller
      * @param Product $product
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        $product->delete();
+        Product::find($id)->delete();
+
+//        $product->delete();
 
         return redirect()->route('products.index')
             ->with('success','Product deleted successfully');

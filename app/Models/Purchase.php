@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class Purchase extends Model
 {
     use HasFactory;
 
-    /**
-     * @var array
-     */
     protected $fillable = [
-        'nama_barang', 'harga_barang', 'biaya_penyimpanan', 'periode_permintaan', 'satuan', 'konversi'
+        'nama_pemesan',
+        'product_id',
+        'jumlah_pemesan',
+        'lead_time',
+        'pakai'
     ];
 }
