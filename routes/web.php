@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ManajerController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
@@ -23,7 +24,9 @@ Route::get('/', function() {
     return view('welcome');
 } )->name('home')->middleware('auth');
 Route::get('/administrator', function() { return view('homes.administrator'); } )->name('home.administrator');
-Route::get('/manager', function() { return view('homes.manager'); } )->name('home.manager');
+Route::get('/manajer', function() { return view('homes.manajer'); } )->name('home.manajer');
+Route::get('/gudang', function() { return view('homes.gudang'); } )->name('home.gudang');
+Route::get('/purchasing', function() { return view('homes.purchasing'); } )->name('home.purchasing');
 Route::get('/staff', function() { return view('homes.staff'); } )->name('home.staff');
 
 Auth::routes();
@@ -34,4 +37,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
+    Route::get('/manajer/eoq', [ManajerController::class, 'eoq'])->name('manajer.eoq');
+    Route::get('/manajer/rop', [ManajerController::class, 'rop'])->name('manajer.rop');
 });

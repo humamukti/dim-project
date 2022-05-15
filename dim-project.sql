@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 15/05/2022 22:28:00
+ Date: 16/05/2022 05:18:12
 */
 
 SET NAMES utf8mb4;
@@ -95,7 +95,7 @@ CREATE TABLE `model_has_roles`  (
 -- Records of model_has_roles
 -- ----------------------------
 INSERT INTO `model_has_roles` VALUES (1, 'App\\Models\\User', 1);
-INSERT INTO `model_has_roles` VALUES (2, 'App\\Models\\User', 3);
+INSERT INTO `model_has_roles` VALUES (3, 'App\\Models\\User', 3);
 
 -- ----------------------------
 -- Table structure for password_resets

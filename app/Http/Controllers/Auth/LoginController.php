@@ -27,6 +27,15 @@ class LoginController extends Controller
         if ( $user->hasRole('administrator') ) {// do your magic here
             return redirect()->route('home.administrator');
         }
+        if ( $user->hasRole('gudang') ) {// do your magic here
+            return redirect()->route('home.gudang');
+        }
+        if ( $user->hasRole('manajer') ) {// do your magic here
+            return redirect()->route('home.manajer');
+        }
+        if ( $user->hasRole('purchasing') ) {// do your magic here
+            return redirect()->route('home.purchasing');
+        }
 
         return redirect('/home');
     }
